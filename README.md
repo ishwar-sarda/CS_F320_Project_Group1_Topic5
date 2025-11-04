@@ -1,5 +1,5 @@
 # CS_F320_Project_Group1_Topic5
-# Stock Movement Prediction and Backtesting: Solar Industries India Ltd.
+# Stock	Price	Prediction:	Three-Class	Classification	with	Volatility-Aware	Trading	Strategy
 
 This repository focuses on **predicting directional movements** of **Solar Industries India Ltd.**, a high-volume traded stock in Indian equity markets, using **machine learning models** and **volatility-based regime analysis**.
 
@@ -19,7 +19,7 @@ This repository focuses on **predicting directional movements** of **Solar Indus
 
 ---
 
-### ⚡ Volatility Regimes
+### Volatility Regimes
 
 * Stock data is segmented using **INDIAVIX (India Volatility Index)** into three volatility regimes:
   **Low**, **Medium**, and **High**.
@@ -124,11 +124,5 @@ You can contribute by extending or refining the system.
 * Incorporate **macroeconomic** or **news sentiment** data
 * Optimize **hyperparameters** and **model architectures**
 * Add **transaction cost modeling** for realistic backtesting
-
----
-
-## 📫 Contact
-
-For questions or collaboration inquiries, please reach out via GitHub Issues or Pull Requests.
 
 ---
