@@ -1,70 +1,134 @@
 # CS_F320_Project_Group1_Topic5
-Baseline multinomial logistic regression on Solar Industries India Ltd., a highly traded stock. We applied LSTM, XGBoost, and logistic regression across full and volatility-specific regimes (based on INDIAVIX). Backtests used logistic regression probabilities analyzing returns, max drawdown, and more.
-Stock Movement Prediction and Backtesting: Solar Industries India Ltd.
-This repository focuses on predicting directional movements of Solar Industries India Ltd., a high-volume traded stock in Indian equity markets, using multiple machine learning models and volatility-based regime analysis.
+# Stock Movement Prediction and Backtesting: Solar Industries India Ltd.
 
-Project Overview
-Models Implemented:
+This repository focuses on **predicting directional movements** of **Solar Industries India Ltd.**, a high-volume traded stock in Indian equity markets, using **machine learning models** and **volatility-based regime analysis**.
 
-Baseline: Multinomial Logistic Regression for three-class classification (Up, Down, Hold).
+---
 
-Advanced: LSTM (Long Short-Term Memory) networks capturing sequential dependencies and XGBoost enhancing gradient boosting on tabular features.
+## Project Overview
 
-Volatility Regimes:
+### Models Implemented
 
-Segmentation of stock data based on INDIAVIX (India Volatility Index) into three regimes.
+* **Baseline:**
+  Multinomial Logistic Regression for **three-class classification** — *Up*, *Down*, *Hold*.
 
-Models are trained and evaluated both on the entire dataset and regime-specific subsets, allowing volatility-aware prediction.
+* **Advanced:**
 
-Feature Engineering:
+  * **LSTM (Long Short-Term Memory)** networks capturing sequential dependencies in price movements.
+  * **XGBoost** leveraging gradient boosting on engineered tabular features.
 
-Incorporation of lagged returns, technical indicators (RSI, EMA), volume, and other market metrics.
+---
 
-Handling categorical variables such as EMA comparison and directional classes via encoding.
+### ⚡ Volatility Regimes
 
-Imbalanced Data Handling:
+* Stock data is segmented using **INDIAVIX (India Volatility Index)** into three volatility regimes:
+  **Low**, **Medium**, and **High**.
+* Models are trained and evaluated both on:
 
-Use of SMOTE (Synthetic Minority Over-sampling Technique) to balance target classes during logistic regression training.
+  * The **entire dataset**, and
+  * **Regime-specific subsets**, enabling **volatility-aware prediction**.
 
-Backtesting Framework:
+---
 
-Uses predicted class probabilities from the logistic regression model as trading signals.
+### Feature Engineering
 
-Calculates financial metrics such as cumulative return, maximum drawdown, hit rate, and Sharpe ratio for performance evaluation.
+* Incorporation of:
 
-Evaluation Metrics:
+  * Lagged returns
+  * Technical indicators (RSI, EMA)
+  * Volume and price-based metrics
+* Categorical variables (e.g., EMA comparison, Direction) handled via **encoding**.
+* All temporal data aligned and windowed for model input consistency.
 
-Precision, recall, F1-score for classification.
+---
 
-Financial evaluation on simulated trading outcomes.
+### Imbalanced Data Handling
 
-Repository Structure
-fods_project_models.py: Implements baseline logistic regression and XGBoost models with feature scaling and SMOTE for imbalance.
+* **SMOTE (Synthetic Minority Over-sampling Technique)** applied during Logistic Regression training to ensure class balance across *Up*, *Down*, and *Hold* labels.
 
-fods_project_lstm.py: Defines the LSTM architecture using TensorFlow, with sequential training and test prediction loops.
+---
 
-SOLARINDS_HighVol.csv: Processed stock data containing price, volume, technical indicators, and volatility regime flags.
+## Backtesting Framework
 
-Project proposal PDF outlining methodology, hypotheses, and analysis framework.
+* Predicted **class probabilities** (from Logistic Regression) are used as **trading signals**.
+* Simulated strategy performance evaluated via:
 
-Usage
-Data Preparation: Import and preprocess stock data, encode categorical features, and split by date for training and testing.
+  * **Cumulative Returns**
+  * **Maximum Drawdown**
+  * **Hit Rate**
+  * **Sharpe Ratio**
 
-Feature Scaling & Imbalance Treatment: Standardize numeric features and apply SMOTE to balance classes.
+This enables a direct link between **model accuracy** and **financial profitability**.
 
-Model Training: Train logistic regression, XGBoost, and LSTM models separately on full and regime-based datasets.
+---
 
-Prediction & Backtesting: Generate predictions and class probabilities; simulate trading strategies using these signals.
+## Evaluation Metrics
 
-Evaluation: Review classification metrics and backtest financial performance to assess practical strategy effectiveness.
+| Category           | Metrics                                                 |
+| ------------------ | ------------------------------------------------------- |
+| **Classification** | Precision, Recall, F1-Score                             |
+| **Financial**      | Cumulative Return, Max Drawdown, Sharpe Ratio, Hit Rate |
 
-Contributions and Extensions
-This repository provides a foundational approach to stock movement prediction for one Indian stock, emphasizing volatility-aware modeling. Contributions are welcome for:
+---
 
-Extending to multiple stocks or indices.
+## Repository Structure
 
-Incorporating additional data sources (macroeconomic indicators, news sentiment).
+```
+├── fods_project_models.py        # Implements Logistic Regression & XGBoost with scaling + SMOTE
+├── fods_project_lstm.py          # Defines LSTM architecture and sequential prediction
+├── SOLARINDS_HighVol.csv         # Processed dataset with technical indicators & volatility flags
+├── project_proposal.pdf          # Methodology, hypotheses, and analysis framework
+└── README.md                     # Project documentation
+```
 
-Refining model architectures and hyperparameters.
+---
 
-Improving backtesting robustness with transaction costs and realistic trading constraints.
+## Usage
+
+### 1. **Data Preparation**
+
+* Import and preprocess stock data
+* Encode categorical features
+* Split by **date range** for train/test (2010–2019 for training, 2020–2025 for testing)
+
+### 2. **Feature Scaling & Imbalance Treatment**
+
+* Standardize numeric features
+* Apply **SMOTE** to balance class representation
+
+### 3. **Model Training**
+
+* Train **Logistic Regression**, **XGBoost**, and **LSTM** models
+* Conduct experiments on **full dataset** and **volatility-specific regimes**
+
+### 4. **Prediction & Backtesting**
+
+* Generate directional **predictions** and **class probabilities**
+* Simulate **trading strategies** using prediction-based signals
+
+### 5. **Evaluation**
+
+* Compute **classification metrics**
+* Perform **backtest analysis** to assess trading performance
+
+---
+
+## Contributions and Extensions
+
+This repository offers a **volatility-aware stock prediction framework** using multiple model families.
+You can contribute by extending or refining the system.
+
+### Ideas for Extension:
+
+* Apply framework to **multiple Indian equities or indices**
+* Incorporate **macroeconomic** or **news sentiment** data
+* Optimize **hyperparameters** and **model architectures**
+* Add **transaction cost modeling** for realistic backtesting
+
+---
+
+## 📫 Contact
+
+For questions or collaboration inquiries, please reach out via GitHub Issues or Pull Requests.
+
+---
