@@ -54,7 +54,7 @@ This repository focuses on **predicting directional movements** of **Solar Indus
 
   * **Cumulative Returns**
   * **Maximum Drawdown**
-  * **Hit Rate**
+  * **Win Rate**
   * **Sharpe Ratio**
 
 This enables a direct link between **model accuracy** and **financial profitability**.
