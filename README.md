@@ -66,14 +66,15 @@ This enables a direct link between **model accuracy** and **financial profitabil
 | Category           | Metrics                                                 |
 | ------------------ | ------------------------------------------------------- |
 | **Classification** | Precision, Recall, F1-Score                             |
-| **Financial**      | Cumulative Return, Max Drawdown, Sharpe Ratio, Hit Rate |
+| **Financial**      | Cumulative Return, Max Drawdown, Sharpe Ratio, Win Rate |
 
 ---
 
 ## Repository Structure
 
 ```
-├── fods_project_models.py        # Implements Logistic Regression, LSTM & XGBoost with scaling + SMOTE
+├── fods_project_models.ipynb     # Implements Logistic Regression, LSTM & XGBoost + Backtest Results
+├── FODS_project_eda.ipynb        # Exploratory Data Analysis
 ├── project_proposal.pdf          # Methodology, hypotheses, and analysis framework
 └── README.md                     # Project documentation
 ```
