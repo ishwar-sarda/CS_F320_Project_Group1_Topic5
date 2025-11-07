@@ -1,4 +1,3 @@
-# CS_F320_Project_Group1_Topic5
 # Stock	Price	Prediction:	Three-Class	Classification	with	Volatility-Aware	Trading	Strategy
 
 This repository focuses on **predicting directional movements** of **Solar Industries India Ltd.**, a high-volume traded stock in Indian equity markets, using **machine learning models** and **volatility-based regime analysis**.
