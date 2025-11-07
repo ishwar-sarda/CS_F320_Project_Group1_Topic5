@@ -74,9 +74,7 @@ This enables a direct link between **model accuracy** and **financial profitabil
 ## Repository Structure
 
 ```
-├── fods_project_models.py        # Implements Logistic Regression & XGBoost with scaling + SMOTE
-├── fods_project_lstm.py          # Defines LSTM architecture and sequential prediction
-├── SOLARINDS_HighVol.csv         # Processed dataset with technical indicators & volatility flags
+├── fods_project_models.py        # Implements Logistic Regression, LSTM & XGBoost with scaling + SMOTE
 ├── project_proposal.pdf          # Methodology, hypotheses, and analysis framework
 └── README.md                     # Project documentation
 ```
