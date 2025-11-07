@@ -49,7 +49,7 @@ This repository focuses on **predicting directional movements** of **Solar Indus
 
 ## Backtesting Framework
 
-* Predicted **class probabilities** (from Logistic Regression) are used as **trading signals**.
+* Predicted **class probabilities** (from Softmax Regression and XGBoost) are used as **trading signals**.
 * Simulated strategy performance evaluated via:
 
   * **Cumulative Returns**
@@ -118,9 +118,14 @@ You can contribute by extending or refining the system.
 
 ### Ideas for Extension:
 
+* Defining volatility locally instead of using a market-wide indicator
+* Extension to a portfolio of stocks instead of a single stock
+* Utilizing softwares such as TradingView to backtest results using feature importances
+* Changing threshold values for direction and volatility quantiles as per retail requirements
+* Using CHRONOS library for better time-series predictions
 * Apply framework to **multiple Indian equities or indices**
 * Incorporate **macroeconomic** or **news sentiment** data
 * Optimize **hyperparameters** and **model architectures**
-* Add **transaction cost modeling** for realistic backtesting
+
 
 ---
